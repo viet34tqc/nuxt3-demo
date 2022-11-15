@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
-			productsBaseUrl: 'https://fakestoreapi.com/products/',
+			productsBaseUrl: process.env.NUXT_PUBLIC_API_BASE,
 		},
 	},
 });

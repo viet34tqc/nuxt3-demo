@@ -1,8 +1,7 @@
 <script setup>
+const runtimeConfig = useRuntimeConfig();
 //  fetch the products
-const { data: products } = await useFetch('https://fakestoreapi.com/products', {
-	lazy: true,
-});
+const { data: products } = await useFetch(runtimeConfig.public.productsBaseUrl);
 
 definePageMeta({
 	layout: 'products',
@@ -17,7 +16,7 @@ useHead({
 <template>
 	<div>
 		<div class="grid grid-cols-4 gap-5">
-			<div v-for="p in products"> 
+			<div v-for="p in products">
 				<ProductCard :product="p" />
 			</div>
 		</div>
