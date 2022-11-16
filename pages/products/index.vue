@@ -8,8 +8,8 @@ definePageMeta({
 });
 
 useHead({
-	title: 'Nuxt Dojo | Merch',
-	meta: [{ name: 'description', content: 'Nuxt 3 Merch' }],
+	title: 'Nuxt 3 Demo | Shop',
+	meta: [{ name: 'description', content: 'Nuxt 3 Shop' }],
 });
 </script>
 

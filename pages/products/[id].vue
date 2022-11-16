@@ -8,6 +8,8 @@ const uri = runtimeConfig.public.productsBaseUrl + id;
 //const { data: product } = await useFetch(uri);
 const { data: product } = await useFetch(uri, { key: id });
 
+// If we access the non-existing product, throw an error
+// Then it will redirect to error page
 if (!product.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Product not found' });
 }
@@ -20,7 +22,7 @@ definePageMeta({
 <template>
 	<div>
 		<Head>
-			<Title>Nuxt Dojo | {{ product.title }}</Title>
+			<Title>Nuxt 3 Demo | {{ product.title }}</Title>
 			<Meta name="description" :content="product.description" />
 		</Head>
 
